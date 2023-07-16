@@ -1,14 +1,14 @@
 # High-Level Design (HLD) Document
 
-# /*[[ProjectName]]*/
+# {[ProjectName]}
 
 Table of Contents
 
-/*[[TableOfContent]]*/
+{[TableOfContent]}
 
 ### 1. Introduction
 
-/*[[ProjectSummary]]*/ This High-Level Design (HLD) document provides an overview of the system architecture and the major components involved in the project.
+{[ProjectSummary]} This High-Level Design (HLD) document provides an overview of the system architecture and the major components involved in the project.
 
 ### 2. System Architecture
 
@@ -35,7 +35,7 @@ The Application Server acts as the central processing unit of the system. It per
 
 ### 5. Machine Learning Model
 
-/*[[ModelIsTrainedUsing]]*/ The Model leverages various machine learning algorithms, such as Random Forest, SVM, Gradient Boosting, to learn patterns and make accurate predictions. The Model is trained and periodically updated to adapt to changing data patterns and improve its performance.
+{[ModelIsTrainedUsing]} The Model leverages various machine learning algorithms, such as Random Forest, SVM, Gradient Boosting, to learn patterns and make accurate predictions. The Model is trained and periodically updated to adapt to changing data patterns and improve its performance.
 
 ### 6. Database
 
@@ -45,8 +45,8 @@ The Database component stores the input data and the corresponding predictions m
 
 Comprehensive documentation, including code documentation, system architecture, data dictionaries, and user manuals, is maintained to facilitate system understanding, maintenance, and future enhancements.
 
-[Code on GitHub](/*[[GithubLink]]*/)
-[LinkedIn Post](/*[[LinkedinPostLink]]*/)
+[Code on GitHub]({[GithubLink]})
+[LinkedIn Post]({[LinkedinPostLink]})
 
 ### 11. Conclusion
 

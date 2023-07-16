@@ -1,14 +1,14 @@
 # Low-Level Design (LLD) Document
 
-# /*[[ProjectName]]*/
+# {[ProjectName]}
 
 Table of Contents
 
-/*[[TableOfContent]]*/
+{[TableOfContent]}
 
 ### 1. Problem Statement
 
-/*[[ProblemStatement]]*/
+{[ProblemStatement]}
 
 ### 2. System Architecture
 
@@ -97,7 +97,7 @@ flowchart LR
 
 The Model Evaluation Module will assess the model's performance using appropriate metrics such as:
 
-/*[[ModelEvaluationPoints]]*/
+{[ModelEvaluationPoints]}
 
 ```mermaid
 flowchart LR
@@ -144,7 +144,7 @@ The deployed model will be continuously monitored for performance and accuracy. 
 
 ### 14. Documentation and Collaboration
 
-The entire project, including code, data, and model documentation, will be uploaded on [Github](/*[[GithubRepoLink]]*/). Anyone can collaborate on this project by enhancing the project codes and model.
+The entire project, including code, data, and model documentation, will be uploaded on [Github]({[GithubRepoLink]}). Anyone can collaborate on this project by enhancing the project codes and model.
 
 ### 17. Conclusion
 

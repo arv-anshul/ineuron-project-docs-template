@@ -1,0 +1,3 @@
+ProjectName: Backorder Prediction System
+ProjectDeploymentSummary: This project is deployed on AWS using Beanstalk.
+ResponsibleForPredicting: backorder status

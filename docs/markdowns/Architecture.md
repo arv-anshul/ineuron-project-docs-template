@@ -19,7 +19,7 @@ The project follows a modular and layered architecture to ensure modifying-abili
 1. **User Interface (UI):** The UI component handles user interactions and provides a user-friendly interface for inputting required information and getting predictions.
 2. **Application Layer:** The Application Layer serves as the intermediary between the UI and the backend components. It processes user inputs, performs data validation, and orchestrates the flow of information.
 3. **Back-End Services:** The Back-End Services encompass various functionalities required for the prediction process, such as data ingestion, data transformation, data validation, model training, and model prediction.
-4. **Machine Learning Model:** The Machine Learning Model component is responsible for predicting the {[Unknown]} based on the input data. It utilizes trained models, algorithms, and statistical techniques to make accurate predictions.
+4. **Machine Learning Model:** The Machine Learning Model component is responsible for predicting the {[ResponsibleForPredicting]} based on the input data. It utilizes trained models, algorithms, and statistical techniques to make accurate predictions.
 5. **Data Storage:** The Data Storage component stores the input data, predictions, and other relevant information. It can include databases, file systems storage solutions.
 
 ### 3. Communication Protocols
@@ -40,14 +40,11 @@ This project utilizes the following technologies and frameworks:
 - **Machine Learning:** Python library **scikit-learn** for implementing the Machine Learning Model.
 - **Data Storage:** NoSQL databases i.e MongoDB for storing data.
 - **Data Processing:** Python libraries like **pandas, numpy, imblearn** for data manipulation.
-- **Data Vizualization:** Python libraries like **matplotlib, seaborn, pandas** to vizualize the data using python.
+- **Data Visualization:** Python libraries like **matplotlib, seaborn, pandas** to visualize the data using python.
 
 ### 5. Project Deployment
 
-This project is deployed using various deployment strategies like:
-
-- **Cloud:** Utilizing cloud platforms {[CloudPlatformName]} for scalable and flexible deployment.
-- **Containers:** Using containerization technologies like Docker for easier deployment and management.
+{[ProjectDeploymentSummary]}
 
 ### 9. Conclusion
 

@@ -4,7 +4,7 @@
 
 Table of Contents
 
-{[TableOfContent]}
+{[TableOfContents]}
 
 ### 1. Introduction
 

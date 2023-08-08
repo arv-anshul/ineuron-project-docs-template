@@ -4,7 +4,7 @@
 
 Table of Contents
 
-{[TableOfContent]}
+{[TableOfContents]}
 
 ### 1. Problem Statement
 
@@ -85,7 +85,7 @@ flowchart LR
 
     A(train.csv) ==> F{{Model\n Training}}
 
-    subgraph Model Trainging
+    subgraph Model Training
         F --> G[Model Selection]
         G --> H[Hyperparameter Tuning]
         H --> |pipeline| I[Model Training]

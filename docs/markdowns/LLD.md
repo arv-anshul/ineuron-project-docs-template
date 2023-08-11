@@ -32,12 +32,12 @@ Project data is already provided by the Ineuron Portal. But we upload that data 
 ```mermaid
 flowchart TB
 
-subgraph Data Ingestion
-    A[Data from Portal] --> |Using Python| B[(Database)]
-    B --> |import as| C[DataFrame]
-    C ==> D(train.csv)
-    C ==> E(test.csv)
-end
+    subgraph Data Ingestion
+        A[Data from Portal] --> |Using Python| B[(Database)]
+        B --> |import as| C[DataFrame]
+        C ==> D(train.csv)
+        C ==> E(test.csv)
+    end
 ```
 
 ### 4. Data Validation Module
@@ -60,19 +60,23 @@ The Data Transformation Module will carry out the following operations:
 ```mermaid
 flowchart LR
 
-    A1(train.csv) ==> B{{Data\n Preprocessing}}
-    A2(test.csv) ==> B
-
-    subgraph Data Preprocessing
-        B --> C[Feature Engineering] --> D[Feature Selection]
-
-        D --> |numerical features| E[Scaling] --> F[Normalization]
-        D --> |categorical features| G[Encoding]
-
-        H{Pipeline} ==> X[(transformer.pkl)]
-        F ==> H
-        G ==> H
+    subgraph DataPreprocessing
+        C[Feature Engineering]
+        D[Feature Selection]
     end
+
+    subgraph Pipeline
+        subgraph Numerical
+            E[Scaling]
+            F[Normalization]
+        end
+
+        subgraph Categorical
+            G[Encoding]
+        end
+    end
+
+    DataPreprocessing --> Pipeline ==> X[(transformer.pkl)]
 ```
 
 ### 6. Model Training Module
@@ -85,14 +89,15 @@ The Model Training Module will:
 ```mermaid
 flowchart LR
 
-    A(train.csv) ==> F{{Model\n Training}}
+    A(train.csv) ==> ModelTraining
 
-    subgraph Model Training
-        F --> G[Model Selection]
-        G --> H[Hyperparameter Tuning]
-        H --> |pipeline| I[Model Training]
-        I ==> |export| J[(model.pkl)]
+    subgraph ModelTraining
+        G[Model Selection]
+        H[Hyperparameter Tuning]
+        I[Model Training]
     end
+
+    ModelTraining ==> J[(model.pkl)]
 ```
 
 ### 7. Model Evaluation Module
@@ -104,12 +109,12 @@ The Model Evaluation Module will assess the model's performance using appropriat
 ```mermaid
 flowchart LR
 
-    A[(model.pkl)] ==> I{{Model\n Evaluation}}
+    A[(model.pkl)] ==> ModelEvaluation
 
-    subgraph Model Evaluation
-        I --> J[Model Evaluation Metrics]
-        J --> K[Model Validation]
-        K --> L[Model Testing]
+    subgraph ModelEvaluation
+        J[Evaluation Metrics]
+        K[Model Validation]
+        L[Model Testing]
     end
 ```
 
@@ -125,52 +130,52 @@ The Model Deployment Module will:
 The project will have a user interface where users can input product information, and the model will provide backorder predictions.
 
 ```mermaid
-sequenceDiagram
+sequenceDiagram autonumber
 
-actor User
-participant UI
-participant API
-participant Deployed Model
+    actor User
+    participant UI
+    participant API
+    participant Deployed Model
 
-User ->> UI: Input the data
-UI ->> API: POST request
-API ->> Deployed Model: Input Data
-Deployed Model ->> API: Send predictions
-API ->> UI: Display Predictions
-UI ->> User: See/Download the predictions
+    User ->> UI: Input the data
+    UI ->> API: POST request
+    API ->> Deployed Model: Input Data
+    Deployed Model ->> API: Send predictions
+    API ->> UI: Display Predictions
+    UI ->> User: See/Download the predictions
 ```
 
 ### 10. Model Monitoring and Maintenance
 
 The deployed model will be continuously monitored for performance and accuracy. If the model's performance degrades over time, retraining and updating the model will be performed to maintain its effectiveness.
 
-### 14. Documentation and Collaboration
+### 11. Documentation and Collaboration
 
 The entire project, including code, data, and model documentation, will be uploaded on [Github]({[GithubRepoLink]}). Anyone can collaborate on this project by enhancing the project codes and model.
 
-### 17. Conclusion
+### 12. Conclusion
 
 The LLD document lays the foundation for the project. It outlines the system architecture, components, and their interactions. The document serves as a guide for the development, implementation, and maintenance of the project, ensuring a structured and organized approach.
 
 ```mermaid
 sequenceDiagram autonumber
 
-participant Data Ingestion
-participant Data Preprocessing
-participant Model Training
-participant Model Evaluation
-participant Model Deployment
+    participant Data Ingestion
+    participant Data Preprocessing
+    participant Model Training
+    participant Model Evaluation
+    participant Model Deployment
 
-Note over Data Ingestion: Raw data from Portal/Database
-Data Ingestion ->> Data Preprocessing: Clean and Preprocess Data
-Data Preprocessing ->> Model Training: Provide Preprocessed Data
+    Note over Data Ingestion: Raw data from Database
+    Data Ingestion ->> Data Preprocessing: Clean & Process Data
+    Data Preprocessing ->> Model Training: Preprocessed Data
 
-loop Achieve best score
-    Note over Model Training,Model Evaluation: Hyperparameter tuning
-end
+    loop Achieve best score
+        Note over Model Training,Model Evaluation: Hyperparameter tuning
+    end
 
-loop CICD Pipeline
-    Model Training ->> Model Evaluation: Train Model
-    Model Evaluation ->> Model Deployment: Evaluate Model Performance
-end
+    loop CICD Pipeline
+        Model Training ->> Model Evaluation: Train Model
+        Model Evaluation ->> Model Deployment: Evaluate Model
+    end
 ```

@@ -46,6 +46,6 @@ This project utilizes the following technologies and frameworks:
 
 {[ProjectDeploymentSummary]}
 
-### 9. Conclusion
+### 6. Conclusion
 
 The Project Architecture Document outlines the architecture and design considerations for the project. It highlights the key components, their interactions, and the technologies used in the system. This document serves as a reference for the development team, guiding the implementation and ensuring the system's modifying-ability, scalability, and maintainability.

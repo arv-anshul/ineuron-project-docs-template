@@ -43,12 +43,12 @@ The Application Server acts as the central processing unit of the system. It per
 
 The Database component stores the input data and the corresponding predictions made by the Application Server. It provides data persistence and allows for data retrieval and analysis. This project uses MongoDB to ensure data integrity and accessibility.
 
-### 10. Documentation and Collaboration
+### 7. Documentation and Collaboration
 
 Comprehensive documentation, including code documentation, system architecture, data dictionaries, and user manuals, is maintained to facilitate system understanding, maintenance, and future enhancements.
 
 [Code on GitHub]({[GithubLink]})
 
-### 11. Conclusion
+### 8. Conclusion
 
 The High-Level Design (HLD) document provides an overview of the system architecture and the major components involved in the Backorder Prediction system in the e-commerce domain. It outlines the interaction between the User Interface, Application Server, Machine Learning Model, and Database components. The document serves as a guide for the development, implementation, and maintenance of the system, ensuring a structured and coherent approach.

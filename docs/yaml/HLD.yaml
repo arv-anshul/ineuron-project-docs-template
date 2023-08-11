@@ -1,5 +1,3 @@
-ProjectName: Backorder Prediction System
 ProjectSummary: The Backorder Prediction system aims to predict whether a product in an e-commerce setting is likely to go on backorder.
 ModelIsTrainedUsing: Model is trained using historical data that includes information about product inventory, sales history, and supplier performance metrics.
 GithubLink: https://github.com/arv-anshul/ineuron-backorder-prediction
-LinkedinPostLink: https://linkedin.com/in/arv-anshul

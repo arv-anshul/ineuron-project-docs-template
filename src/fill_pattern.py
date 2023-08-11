@@ -7,6 +7,7 @@ from src.table_of_contents import generate_toc
 
 
 def replace_patterns(
+    project_name: str,
     markdown_fp: ReadmePath,
     yaml_fp: YamlPath,
     export_md_path: ExportMDPath,
@@ -24,9 +25,14 @@ def replace_patterns(
 
     def replace(match: re.Match) -> str:
         key = match.group(1)
+
         if key == 'TableOfContents':
             return '\n'.join(generate_toc(markdown_fp))
-        return str(yaml_data.get(key, match.group(0)))
+        elif key == 'ProjectName':
+            return project_name
+
+        rv = yaml_data.get(key)
+        return '' if rv is None else rv
 
     updated_data = re.sub(pattern, replace, md_data)
 

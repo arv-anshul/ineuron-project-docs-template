@@ -1,3 +1,2 @@
-ProjectName: Backorder Prediction System
-ProjectDeploymentSummary: This project is deployed on AWS using Beanstalk.
+ProjectDeploymentSummary: "This project is deployed on streamlit share cloud. [See Here](https://ineuron-backorder-prediction-1a.streamlit.app)"
 ResponsibleForPredicting: backorder status

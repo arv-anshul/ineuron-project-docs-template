@@ -1,12 +1,12 @@
 # Project Architecture Document
 
+# {[ProjectName]}
+
 Table of Contents
 
 {[TableOfContents]}
 
-# Project Architecture Document
-
-# {[ProjectName]}
+---
 
 ### 1. Introduction
 

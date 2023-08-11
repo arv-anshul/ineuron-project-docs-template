@@ -6,6 +6,8 @@ Table of Contents
 
 {[TableOfContents]}
 
+---
+
 ### 1. Introduction
 
 {[ProjectSummary]} This High-Level Design (HLD) document provides an overview of the system architecture and the major components involved in the project.
@@ -46,7 +48,6 @@ The Database component stores the input data and the corresponding predictions m
 Comprehensive documentation, including code documentation, system architecture, data dictionaries, and user manuals, is maintained to facilitate system understanding, maintenance, and future enhancements.
 
 [Code on GitHub]({[GithubLink]})
-[LinkedIn Post]({[LinkedinPostLink]})
 
 ### 11. Conclusion
 

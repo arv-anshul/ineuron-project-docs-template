@@ -6,6 +6,8 @@ Table of Contents
 
 {[TableOfContents]}
 
+---
+
 ### 1. Introduction
 
 The Data Processing Requirements (DPR) document outlines the data processing pipeline and requirements for the project. It describes the steps involved in data ingestion, validation, transformation, and storage to ensure reliable and accurate predictions.

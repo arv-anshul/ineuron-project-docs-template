@@ -13,6 +13,7 @@ def replace_patterns(
     export_md_path: ExportMDPath,
     export_pdf_path: PdfPath | None = None,
     pattern: str | None = None,
+    for_obsidian: bool = False,
 ) -> None:
     with open(markdown_fp.value, 'r') as md_file:
         md_data = md_file.read()
@@ -27,7 +28,7 @@ def replace_patterns(
         key = match.group(1)
 
         if key == 'TableOfContents':
-            return '\n'.join(generate_toc(markdown_fp))
+            return '\n'.join(generate_toc(markdown_fp, for_obsidian))
         elif key == 'ProjectName':
             return project_name
 

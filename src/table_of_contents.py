@@ -7,7 +7,7 @@ import re
 from src.core.config import ReadmePath
 
 
-def generate_toc(fp: ReadmePath) -> list[str]:
+def generate_toc(fp: ReadmePath, for_obsidian: bool = False) -> list[str]:
     with open(fp.value, 'r') as file:
         content = file.read()
 
@@ -20,6 +20,10 @@ def generate_toc(fp: ReadmePath) -> list[str]:
         link = re.sub(r'\s', '-', title.lower())
         link = re.sub(r'[^\w-]', '', link)
 
-        table_of_contents.append(f"{' ' * level}- [{title}](#{link})\n")
+        if for_obsidian:
+            table_of_contents.append(f"[[#{title}]]  ")
+            continue
+
+        table_of_contents.append(f"{' ' * level}- [{title}](#{link})  ")
 
     return table_of_contents
